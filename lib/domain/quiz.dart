@@ -10,7 +10,7 @@ class Question {
   final int points;
 
   Question({
-    String? id, // Add optional parameter
+    String? id, 
     required this.title,
     required this.choices,
     required this.goodChoice,
@@ -35,9 +35,9 @@ class Answer {
 }
 
 class Player {
-  String userName;
+  final String userName;
   List<Answer> answers = [];
-  Quiz quiz;
+  final Quiz quiz;
 
   Player({required this.userName, required this.quiz});
 
@@ -71,7 +71,7 @@ class Player {
 class Quiz {
   final String id;
   List<Question> questions;
-  List<Player> players = [];
+  final List<Player> players = [];
 
   Quiz(
       {String? id, // Add optional parameter

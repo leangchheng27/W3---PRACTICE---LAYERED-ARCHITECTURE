@@ -62,24 +62,33 @@ class QuizRepository {
   void writeQuiz(Quiz quiz) {
     Map<String, dynamic> data = {
       'id': quiz.id,
-      'questions': quiz.questions.map((q) => {
-        'id': q.id,
-        'title': q.title,
-        'choices': q.choices,
-        'goodChoice': q.goodChoice,
-        'points': q.points,
-      }).toList(),
-      'players': quiz.players.map((p) => {
-        'userName': p.userName,
-        'answers': p.answers.map((a) => {
-          'id': a.id,
-          'questionId': a.questionId,
-          'answerChoice': a.answerChoice,
-        }).toList(),
-      }).toList(),
+      'questions': quiz.questions
+          .map((q) => {
+                'id': q.id,
+                'title': q.title,
+                'choices': q.choices,
+                'goodChoice': q.goodChoice,
+                'points': q.points,
+              })
+          .toList(),
+      'players': quiz.players
+          .map((p) => {
+                'userName': p.userName,
+                'answers': p.answers
+                    .map((a) => {
+                          'id': a.id,
+                          'questionId': a.questionId,
+                          'answerChoice': a.answerChoice,
+                        })
+                    .toList(),
+              })
+          .toList(),
     };
 
     final file = File(filePath);
+// ensure parent dir exists (safe)
+    file.parent.createSync(recursive: true);
+
     JsonEncoder encoder = JsonEncoder.withIndent('  ');
     String jsonString = encoder.convert(data);
     file.writeAsStringSync(jsonString);
