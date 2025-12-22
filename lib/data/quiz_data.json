@@ -1,0 +1,59 @@
+{
+  "id": "quiz-001",
+  "questions": [
+    {
+      "id": "q1",
+      "title": "Capital of France?",
+      "choices": [
+        "Paris",
+        "London",
+        "Rome"
+      ],
+      "goodChoice": "Paris",
+      "points": 10
+    },
+    {
+      "id": "q2",
+      "title": "2 + 2 = ?",
+      "choices": [
+        "2",
+        "4",
+        "5"
+      ],
+      "goodChoice": "4",
+      "points": 50
+    }
+  ],
+  "players": [
+    {
+      "userName": "yb",
+      "answers": [
+        {
+          "id": "2dac46bd-7474-44aa-9930-10763d185eb5",
+          "questionId": "q1",
+          "answerChoice": "Paris"
+        },
+        {
+          "id": "b8f89f11-826f-4aaa-a766-8d2b355bc00e",
+          "questionId": "q2",
+          "answerChoice": "4"
+        }
+      ]
+    },
+    {
+      "userName": "lakena",
+      "answers": [
+        {
+          "id": "7cf22426-e62f-47e6-b017-35f2f09c81f4",
+          "questionId": "q1",
+          "answerChoice": "Paris"
+        },
+        {
+          "id": "b396dd10-1f1f-4c48-8b7f-6d447aec5a10",
+          "questionId": "q2",
+          "answerChoice": "5"
+        }
+      ]
+    }
+  ]
+}

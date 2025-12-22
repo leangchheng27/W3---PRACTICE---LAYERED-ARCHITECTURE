@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # cadt-backend-evaluation
 
 This repository is used for submitting and reviewing classroom assignments.  
@@ -107,3 +108,6 @@ W1/g1/SE323253/
 - Once approved, your PR will be merged.
 
 ---
+=======
+# W3---PRACTICE---LAYERED-ARCHITECTURE
+>>>>>>> 80a973490fdeabe946f33c8232ccbcf5e713d90a
